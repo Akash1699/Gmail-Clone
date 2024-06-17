@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.header .logo img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #0056b3;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-options .user-name {
+    margin-right: 10px;
+}
+
+.user-options img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar .folder-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar .folder-list li {
+    margin-bottom: 10px;
+}
+
+.sidebar .folder-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar .folder-list li a:hover {
+    color: #007bff;
+}
+
+.compose-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.compose-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.compose-button a:hover {
+    background-color: #0056b3;
+}
+
+.email-list {
+    flex: 1;
+    padding: 20px;
+}
+
+.email-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.email-item:hover {
+    background-color: #f0f0f0;
+}
+
+.email-sender {
+    font-weight: bold;
+}
+
+.email-subject {
+    color: #333;
+}
+
+.email-preview {
+    color: #666;
+}
+
+.email-preview-pane {
+    flex: 2;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.email-header {
+    margin-bottom: 20px;
+}
+
+.email-header div {
+    margin-bottom: 10px;
+}
+
+.email-body {
+    line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+</style>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="gmail_logo.png" alt="Gmail Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search mail">
+                <button>Search</button>
+            </div>
+            <div class="user-options">
+                <span class="user-name">John Doe</span>
+                <img src="user_avatar.jpg" alt="User Avatar">
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul class="folder-list">
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">Starred</a></li>
+                    <li><a href="#">Sent Mail</a></li>
+                    <li><a href="#">Drafts</a></li>
+                    <li><a href="#">Trash</a></li>
+                </ul>
+                <div class="compose-button">
+                    <a href="#">Compose</a>
+                </div>
+            </aside>
+            
+            <!-- Email List -->
+            <section class="email-list">
+                <div class="email-item">
+                    <div class="email-sender">Jane Smith</div>
+                    <div class="email-subject">Meeting Tomorrow</div>
+                    <div class="email-preview">Hey John, we have a meeting scheduled for tomorrow at 10 AM. Don't forget!</div>
+                </div>
+                <!-- More email items can be added similarly -->
+            </section>
+            
+            <!-- Email Preview Pane -->
+            <section class="email-preview-pane">
+                <div class="email-header">
+                    <div class="email-from">From: Jane Smith &lt;jane@example.com&gt;</div>
+                    <div class="email-date">Date: July 1, 2024 10:30 AM</div>
+                    <div class="email-to">To: John Doe &lt;john@example.com&gt;</div>
+                </div>
+                <div class="email-body">
+                    <p>Dear John,</p>
+                    <p>We have a meeting scheduled for tomorrow at 10 AM. Please be on time.</p>
+                    <p>Best regards,<br>Jane</p>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Akash Kumar Singh Gmail Clone. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
